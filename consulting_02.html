@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/jquery.min.js" type="text/javascript"></script>
+		<link rel="shortcut icon" href="images/HXFY_logo.ico">
+		<title>复昕面膜|北京芬森医疗科技有限公司</title>
+	</head>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		li{
+			list-style:none;
+		}
+		a{
+			text-decoration:none;
+		}
+		img{
+			max-width: 100%;
+			border:none;
+			}
+		body{
+			width: 100%;
+			height: 100%;
+			font-family:Arial, "Times New Roman","微软雅黑";
+			font-size:12px;
+			background-color: #fff;
+			cursor: default;
+			}
+		.clear{
+			clear:both;
+		}
+		.inner{
+			width: 1200px;
+			margin: 0 auto;
+		}
+		.left{
+			float: left;
+		}
+		.right{
+			float: right;
+		}
+		ul:after{
+			display: block;
+			clear: both;
+			content: "";
+			visibility: hidden;
+			height: 0;
+		}
+		h2{
+			height: 96px;
+			font-size: 40px;
+			color: #333333;
+			font-family: MicrosoftYaHei;
+			/*font-weight: bold;*/
+			line-height: 96px;
+			padding-left: 50px;
+			background: url(images/h2_bg.png)no-repeat left center;
+		}
+		h3{
+			height: 63px;
+			font-size: 40px;
+			font-family: "微软雅黑";
+			color: #333333;
+			font-weight: normal;
+			line-height: 63px;
+		}
+		h3 span{
+			font-family: Impact;
+			color: #f0f0f0;
+			margin-left: 16px;
+		}
+		.wrap{ width: 100%; }
+		.the_top{ position: fixed; width: 100%; }
+		.the_top .hd{ display: none; }
+		
+		
+		
+		#header{
+			width: 100%;
+			height: 100px;
+			background-color: rgba(255,255,255,1);
+			position:fixed;
+			top: 0;
+		}
+		#header .head{
+			height: 100px;
+		}
+		#header .head .head_left{
+			height: 100px;
+		}
+		#header .head .head_left .logo{
+			width: 154px;
+			height: 154px;
+			background: url(images/logo.png);
+			position: relative;
+			top: 21px;
+		}
+		#header .head .head_left p{
+			width: 200px;
+			font-size: 16px;
+			font-family: Arial;
+			color: #969696;
+			line-height: 24px;
+			margin: 31px 0 0 23px;
+		}
+		#header .head .head_right{
+			height: 62px;
+			margin-top: 38px;
+		}
+		#header .head .head_right li{
+			height: 57px;
+			font-size: 18px;
+			color: #626262;
+			line-height: 57px;
+			margin-left: 60px;
+			cursor: pointer;
+			float: left;
+		}
+		#header .head .head_right li.active{
+			color: #761cbb;
+			border-bottom: 5px solid #761cbb;
+		}
+		#header .head .head_right li:hover{
+			color: #761cbb;
+			border-bottom: 5px solid #761cbb;
+		}
+		
+		
+		#banner{
+			width: 100%;
+			height: 2177px;
+			background: url(images/consulting_02.jpg)no-repeat;
+			background-position: center;
+			padding-top: 172px;
+		}
+		#banner a{
+			display: block;
+			width: 100%;
+			height: 218px;
+		}
+		#banner a:nth-child(1){
+			margin-top: 182px;
+		}
+		
+		
+		#copy{
+			height: 65px;
+			font-size: 16px;
+			color: #fff;
+			text-align: center;
+			line-height: 65px;
+			border-top: 1px solid #3c3c3c;
+			background: #232323;
+		}
+		#copy a{
+			color: #FFFFFF;
+		}
+
+	</style>
+	<body>
+		<header id="header">
+			<div class="inner head">
+				<div class="left head_left">
+					<div class="left logo"></div>
+					<!-- <p class="left">Beijing Finsen Medical Technology Co., Ltd.</p> -->
+				</div>
+	
+				<ul class="right head_right">
+				    <a href="index.html"><li>首页</li></a>
+				    <a href="drugs.html"><li>产品介绍</li></a>
+				    <a href="consulting.html"><li  class="active">资讯中心</li></a>
+				    <a href="https://qc.for-she.com/"><li>资质展示</li></a>
+				    <a href="aboutus.html"><li>关于我们</li></a>
+				</ul>
+			</div>
+		</header>
+	
+		<div id="banner">
+			
+		</div>
+	
+	
+	
+		<div id="copy">
+			北京芬森医疗科技有限公司
+			<br>
+			地址：北京市丰台区丰台镇北大街南里14号2-8 &nbsp;&nbsp;&nbsp;
+			电话：010-63824120
+			<br>
+			Copyright @ 北京芬森医疗科技有限公司 版权所有 &nbsp;&nbsp;&nbsp;
+			京ICP备19057394号-2
+		</div>
+		
+		
+		<script>
+	        //获取头部top的高度值 height 
+			// 触发滚动条 ，  获取页面滚走的距离  sTop  
+			//当 sTop > height  开始实现吸顶效果
+			var h = 0;
+			// var nav = $id("Q-nav");
+			var nav = document.getElementById('header');
+			onscroll = function(){
+				var sTop = document.documentElement.scrollTop || document.body.scrollTop;
+				if( sTop > h ){ //吸顶条件
+					nav.style.position = "fixed";
+					nav.style.top = 0;
+					nav.style.borderBottom= "thick solid #761cbb";
+				}else{
+					nav.style.position = "";
+					nav.style.borderBottom= "0";
+				}
+			}
+	
+	
+		</script>
+	</body>
+</html>
